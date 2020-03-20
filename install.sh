@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKG=go1.13.6
+PKG=go1.14
 
 # download go package
 if [ ! -f $PKG.linux-amd64.tar.gz ]; then
@@ -18,7 +18,7 @@ if [ ! -f /opt/$PKG/setup.sh ]; then
 
 cat <<EOF > setup.sh
 #!/bin/bash
-export GOPROXY=https://goproxy.cn
+export GOPROXY=https://goproxy.io,direct
 export GOROOT=/opt/go
 export GOPATH=\$HOME/gows
 export PATH=\$GOROOT/bin:\$GOPATH/bin:\$PATH
